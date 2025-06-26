@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatFlow - Real-Time Chat</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Animated Background -->
+    <div class="background-animation">
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="floating-shape shape-3"></div>
+      <div class="floating-shape shape-4"></div>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="login" class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <div class="logo">
+            <i class="fas fa-comments"></i>
+            <h1>ChatFlow</h1>
+          </div>
+          <p class="subtitle">Connect instantly with real-time messaging</p>
+        </div>
+        
+        <div class="login-form">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input id="username" placeholder="Enter your username" maxlength="20" />
+          </div>
+          
+          <div class="input-group">
+            <i class="fas fa-door-open"></i>
+            <input id="room" placeholder="Room name" maxlength="30" />
+          </div>
+          
+          <button class="join-btn" onclick="joinChat()">
+            <span>Join Chat</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="login-footer">
+          <p>Enter a room name to create or join existing conversations</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Interface -->
+    <div id="chat-container" class="chat-container" style="display: none;">
+      <!-- Header -->
+      <div class="chat-header">
+        <div class="room-info">
+          <div class="room-avatar">
+            <i class="fas fa-hashtag"></i>
+          </div>
+          <div class="room-details">
+            <h3 id="room-name">Room: General</h3>
+            <span class="online-status">
+              <div class="status-dot"></div>
+              <span id="user-count">Online</span>
+            </span>
+          </div>
+        </div>
+        
+        <div class="header-actions">
+          <button class="action-btn" title="Room Settings">
+            <i class="fas fa-cog"></i>
+          </button>
+          <button class="action-btn leave-btn" onclick="leaveRoom()" title="Leave Room">
+            <i class="fas fa-sign-out-alt"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Messages Area -->
+      <div class="messages-container">
+        <ul id="messages" class="messages-list"></ul>
+        <div id="typing-status" class="typing-indicator"></div>
+      </div>
+
+      <!-- Message Input -->
+      <div class="message-input-container">
+        <form id="chat-form" class="message-form">
+          <div class="input-wrapper">
+            <input id="msg-input" 
+                   autocomplete="off" 
+                   placeholder="Type your message..." 
+                   maxlength="500" />
+            <div class="input-actions">
+              <button type="button" class="emoji-btn" title="Add emoji">
+                <i class="fas fa-smile"></i>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="send-btn" title="Send message">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
