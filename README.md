@@ -128,3 +128,7 @@ Working with Socket.IO helped me understand its role in creating responsive, rea
 Building this application also gave me experience in structuring a project, managing dependencies, and testing functionality across multiple clients.
 
 Overall, this was a valuable hands-on experience that has equipped me with the skills needed to develop interactive, scalable, and dynamic web applications in real-world scenarios.
+
+OUTPUT :-
+
+https://github.com/Kiransekarc/REAL-TIME-CHAT-APPLICATION/issues/1#issue-3226166240
