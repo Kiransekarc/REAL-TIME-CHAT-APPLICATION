@@ -132,3 +132,4 @@ Overall, this was a valuable hands-on experience that has equipped me with the s
 OUTPUT :-
 
 https://github.com/Kiransekarc/REAL-TIME-CHAT-APPLICATION/blob/8e59f87fd8defde0e3a791342d028cb7b343783f/CHAT%20APP%20OUTPUT%201.png
+https://github.com/Kiransekarc/REAL-TIME-CHAT-APPLICATION/blob/6d7f1cdb14139dce54eb9fc19ae4f0837addd0ae/CHAT%20APP%20OUTPUT%202.png
